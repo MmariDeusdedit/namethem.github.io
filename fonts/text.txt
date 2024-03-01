@@ -1,0 +1,22 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 5443-BB43
+
+ Directory of C:\Users\Deusdedit.Mmari\OneDrive - Liquid Intelligent Technologies\Documents\Projects\Wed\static
+
+28 Feb 24  07:00 PM    <DIR>          .
+28 Feb 24  07:00 PM    <DIR>          ..
+28 Feb 24  07:00 PM           258,812 Alegreya-Black.ttf
+28 Feb 24  07:00 PM           257,612 Alegreya-BlackItalic.ttf
+28 Feb 24  07:00 PM           258,792 Alegreya-Bold.ttf
+28 Feb 24  07:00 PM           257,292 Alegreya-BoldItalic.ttf
+28 Feb 24  07:00 PM           259,524 Alegreya-ExtraBold.ttf
+28 Feb 24  07:00 PM           258,224 Alegreya-ExtraBoldItalic.ttf
+28 Feb 24  07:00 PM           254,808 Alegreya-Italic.ttf
+28 Feb 24  07:00 PM           257,664 Alegreya-Medium.ttf
+28 Feb 24  07:00 PM           255,880 Alegreya-MediumItalic.ttf
+28 Feb 24  07:00 PM           256,112 Alegreya-Regular.ttf
+28 Feb 24  07:00 PM           258,972 Alegreya-SemiBold.ttf
+28 Feb 24  07:00 PM           255,880 Alegreya-SemiBoldItalic.ttf
+28 Feb 24  07:00 PM                 0 text.txt
+              13 File(s)      3,089,572 bytes
+               2 Dir(s)  106,600,636,416 bytes free

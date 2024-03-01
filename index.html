@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="fonts.css">
+    <title>NAME THEM 😏</title>
+    <script src="./tailwind.js"></script>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Alegreya;
+            font-size: 1vh;
+        }
+
+        #card {
+            height: 80vh;
+            margin: auto;
+            /* background-image: url("./background.png"); */
+            background-size: 100%;
+            padding: 3rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        #main {
+            font-size: 1.43rem;
+            line-height: 3.74rem;
+            margin-top: 14rem;
+        }
+
+        #date {
+            display: flex;
+        }
+
+        #contr {
+            font-size: 1.43rem;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container mx-auto p-4">
+        <div id="card" class="aspect-[0.704838709677419] rounded-[8px]">
+            <Img id="test" style="z-index: -1; position: absolute; top: 0; left: 0; height: 100%; width: 100%; "
+                src="./background.png" />
+            <!-- <div id="date">
+                <div style="flex-basis: auto; display: flex; align-items: center; flex-direction: column;">
+                    <div class="date-day" style="font-size: 10rem; color: #aa8f72; line-height: 8.8rem;">18</div>
+                    <div class="date-month" style="font-size: 4rem; color: #aa8f72;">MAY</div>
+                </div>
+            </div> -->
+            <div id="main" class="mx-auto text-center">
+                <span>Familia ya Bw. na Bi. BARAKAEL A. J. MMARI wa Kinyerezi, </span><br />
+                <span>Dar-Es-Salaam, wanayo furaha kukujulisha/Kuwajulisha</span><br />
+                <span id="designation">Mhe/Prof/Dr/Mch/BwelBi/Mwl</span>
+                </span><br />
+                <span id="name"
+                    style="font-size: 20px; line-height: 50px;">_________________________</span><br />
+                <span>Kuwa kijana wao mpendwa</span><br />
+                <span style="font-size: 2rem; font-style: italic; color: #aa8f72;">DEUSDEDIT BARAKAEL
+                    MMARI</span><br />
+                <span>Anatarajia kufunga ndoa takatifu tarehe 18 Mei 2024 hapa Dar es </span><br />
+                <span>salaam. Hivyo ukiwa ndugu,jamaa, rafiki jirani wa karibu na </span><br />
+                <span>familia hii, unaombwa mchango wako wa hali na mali ili </span><br />
+                <span>kufanikisha shughuli hii.</span><br />
+                <span>Mwisho wa mchango ni tarehe 05 Mei 2024.</span><br />
+                <span>Tunatanguliza shukrani za dhati.</span><br />
+            </div>
+            <div id="contr">
+                <Span style="color: #aa8f72;">Michango Itumwe:</Span><br />
+                Mbutolwe Mwakitalu<br />
+                Tigo: 0713 236 627<br />
+                <br />
+                Esther Mbutolwe Mwakitalu<br />
+                CRDB: 01J2020341300<br />
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto p-4">
+        <button id="btn">Click me!</button>
+        <input type="text" id="nameInput">
+    </section>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        // Code to configure the text sizes
+        // Setting the base 
+
+        let btn = document.getElementById("btn")
+        let divToCapture = document.getElementById("card")
+        let nameInput = document.getElementById("nameInput")
+        let name = document.getElementById("name")
+        let options = {
+            scale: 1
+        }
+
+        btn.onclick = e => {
+            let unadjustedTransformStyle = divToCapture.style.transform
+
+            divToCapture.style.transform = "scale(2.5)"
+            html2canvas(divToCapture).then(function (canvas) {
+                let dataUrl = canvas.toDataURL('image/png');
+
+                // Convert canvas to image and append it to the body or wherever you want
+                // document.body.appendChild(canvas);
+                var img = new Image();
+                img.src = dataUrl
+
+                // Open the base64 URL in a new browser window
+                // console.log(dataUrl)
+                // window.open(dataUrl, '_blank');
+
+                downloadImage(img)
+            });
+
+            divToCapture.style.transform = unadjustedTransformStyle
+        }
+
+        nameInput.oninput = (e) => {
+            name.innerHTML = nameInput.value == "" ? "_________________________" : nameInput.value
+        }
+
+        function downloadImage(image) {
+            var link = document.createElement('a');
+
+            link.href = image.src;
+            link.download = 'downloaded-image.jpg'; // Specify the name for the downloaded file
+
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>
